@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autenticación</title>
+    <link rel="stylesheet" href="registro.css">
+</head>
+<body>
+    <button id="openAuth">Ingresar / Registrarse</button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="auth-modal" id="authModal">
+        <div class="tabs">
+            <button id="loginTab" class="active">Iniciar Sesión</button>
+            <button id="registerTab">Registrarse</button>
+        </div>
+
+        <div class="tab-content" id="loginContent">
+            <h2>Inicio de Sesión</h2>
+            <form>
+                <label for="loginUser">Usuario:</label>
+                <input type="text" id="loginUser" name="loginUser" required><br><br>
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+
+        <div class="tab-content hidden" id="registerContent">
+            <h2>Registro</h2>
+            <form>
+                <label for="registerUser">Usuario:</label>
+                <input type="text" id="registerUser" name="registerUser" required><br><br>
+                <label for="registerEmail">Correo Electrónico:</label>
+                <input type="email" id="registerEmail" name="registerEmail" required><br><br>
+                <label for="registerPassword">Contraseña:</label>
+                <input type="password" id="registerPassword" name="registerPassword" required><br><br>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+
+        <button id="closeAuth">Cerrar</button>
+    </div>
+    <script src="registro.js"></script>
+</body>
+</html>

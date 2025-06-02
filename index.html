@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CECyTEM - CUAUTITLAN</title>
+    <link rel="stylesheet" href="materiasInicio.css">
+    <script src="materiasInicio.js"></script>
+
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li><a href="materias.html">MATERIAS</a></li>
+                <li><a href="#">HORARIO</a></li>
+            </ul>
+            <div class="icons">
+                <span>CUENTA</span>
+            
+            <link rel="stylesheet" href="registro.css">
+            <button id="openAuth">Ingresar / Registrarse</button>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="auth-modal" id="authModal">
+        <div class="tabs">
+            <button id="loginTab" class="active">Iniciar Sesión</button>
+            <button id="registerTab">Registrarse</button>
+        </div>
+
+        <div class="tab-content" id="loginContent">
+            <h2>Inicio de Sesión</h2>
+            <form>
+                <label for="loginUser">Usuario:</label>
+                <input type="text" id="loginUser" name="loginUser" required><br><br>
+                <label for="loginPassword">Contraseña:</label>
+                <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
+
+        <div class="tab-content hidden" id="registerContent">
+            <h2>Registro</h2>
+            <form action="register.php" method="POST">
+    <label for="nombre">Usuario:</label>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="correo">Correo Electrónico:</label>
+    <input type="email" id="correo" name="correo" required><br><br>
+
+    <label for="contrasena">Contraseña:</label>
+    <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+    <button type="submit">Registrarse</button>
+</form>
+
+
+        </div>
+
+        <button id="closeAuth">Cerrar</button>
+    </div>
+    <script src="registro.js"></script>
+            
+            </div>
+        </nav>
+    </header>
+    <div class="text-image-container">
+        <div class="text">
+            <h2>CECyTEM Plantel Cuautitlan</h2>
+            <p>El CECyTEM Plantel Cuautitlán es una institución de educación media superior la cual tiene ubicacion en el Estado de México
+                 que ofrece programas de bachillerato tecnológico con un enfoque práctico y técnico. 
+                 Su objetivo es preparar a los estudiantes con habilidades especializadas para el mundo laboral y académico.</p>
+        </div>
+        <div class="image">
+            <img src="cecyt.jpg" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>
+

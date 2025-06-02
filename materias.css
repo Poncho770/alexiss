@@ -1,0 +1,108 @@
+body {
+  background: linear-gradient(45deg, #004d3d, #007e5d);
+  font-family: 'Arial', sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(20%) blur(5px);
+  z-index: -1;
+}
+
+/* Contenedor de la galería */
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  width: 90%;
+  max-width: 1200px;
+  transition: all 0.3s ease;
+}
+
+
+/* Estilo para cada ítem de la galería */
+.galeria-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  background: rgba(255, 255, 255, 0.8); /* Fondo claro para mejor contraste */
+}
+
+/* Efecto al pasar el ratón (zoom y animación) */
+.galeria-item:hover {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Imagen dentro del ítem */
+.galeria-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+  border-radius: 15px;
+}
+
+/* Efecto al pasar sobre la imagen */
+.galeria-item:hover img {
+  transform: scale(1.15);
+}
+
+/* Descripción sobre la imagen */
+.descripcion {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  background: rgba(6, 7, 7, 0.8);
+  text-align: center;
+  font-size: 22px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.galeria-item:hover .descripcion {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efecto de transición en el contenedor */
+.galeria-container {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
